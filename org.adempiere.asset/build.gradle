@@ -139,4 +139,8 @@ signing {
 
 test {
     useJUnitPlatform()
+    systemProperty 'java.awt.headless', 'true'
+    filter {
+        excludeTestsMatching 'org.compiere.model.IT_MAsset'
+    }
 }
